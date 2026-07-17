@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"unsafe"
 )
 
 func main() {
@@ -17,4 +18,6 @@ func main() {
 		panic(err)
 	}
 	fmt.Println("number of bytes written:", stringLen)
+	fmt.Printf("Type of var aNumber: %T\n", aNumber)
+	fmt.Printf("Size of var aNumber: %v\n", unsafe.Sizeof(aNumber))
 }
